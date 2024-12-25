@@ -127,7 +127,10 @@ then
     PACCHETTI="$PACCHETTI jp2a"
 fi
 
-echo "sudo apt install " "$PACCHETTI"
+if [[ "$PACCHETTI" != "" ]];
+then
+    echo "sudo apt install " "$PACCHETTI"
+fi
 
 cd "$HOME/Desktop"
 while true
